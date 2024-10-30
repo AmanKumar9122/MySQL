@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+
+    <!-- Internal CSS for basic styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Validation with DHTML</h2>
+    
+    <form id="myForm" onsubmit="return validateForm()">
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span id="nameError" class="error"></span>
+        </div>
+
+        <div class="input-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <input type="submit" value="Submit">
+        <div id="formStatus" class="success"></div>
+    </form>
+
+    <!-- Client-side JavaScript for validation -->
+    <script>
+        // Function to validate the form
+        function validateForm() {
+            let isValid = true;
+
+            // Get the form elements
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const formStatus = document.getElementById('formStatus');
+
+            // Reset error messages and status
+            nameError.textContent = "";
+            emailError.textContent = "";
+            formStatus.textContent = "";
+
+            // Validate Name
+            if (nameField.value === "") {
+                nameError.textContent = "Name is required.";
+                isValid = false;
+            }
+
+            // Validate Email
+            if (emailField.value === "") {
+                emailError.textContent = "Email is required.";
+                isValid = false;
+            } else if (!validateEmail(emailField.value)) {
+                emailError.textContent = "Invalid email format.";
+                isValid = false;
+            }
+
+            // If form is valid, show success message
+            if (isValid) {
+                formStatus.textContent = "Form submitted successfully!";
+                formStatus.classList.add("success");
+                return true;
+            }
+
+            // Prevent form submission if invalid
+            return false;
+        }
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>

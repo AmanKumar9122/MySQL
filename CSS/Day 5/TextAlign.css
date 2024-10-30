@@ -1,0 +1,24 @@
+h1{
+    /* text-align: center; */
+    /* text-align: right; */
+    text-align: end;
+    /* border: solid; */
+    /* Alignment according to parent element though alignment 
+    is in right but due to having width 50 it will appear in the centre */
+    width: 50%;
+    text-decoration: double red overline;
+    /* text-decoration: none; After using none all the text decoration get removed*/
+}
+h2{
+    /* font-weight: 400; */
+    font-weight: lighter;
+}
+p {
+    line-height: 1.5;
+    /* line-height: normal; */
+    letter-spacing: 2px;
+    /* letter-spacing: normal; */
+    font-size: 15px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: fantasy;
+}

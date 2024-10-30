@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-cytURmCgsA4fJGctrb9vWELVJwM1keEC4Q&s');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 3em;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+}
+.highlight-box {
+    background-image: url('https://static.scientificamerican.com/dam/m/128e9a2bf8a1939/original/DM0HT8_WEB.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin: 20px 0;
+    color: rgb(4, 2, 2);
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+}

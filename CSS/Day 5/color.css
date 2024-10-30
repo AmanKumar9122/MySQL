@@ -1,0 +1,13 @@
+h2 {
+    color: blue;
+    background-color: gray;
+}
+p {
+    color: red;
+    background-color: cornsilk;
+}
+button {
+    color: gold;
+    /* background-color: black; This property is just used to set background color*/
+    /* background: black;  This property can be used to several different thing like picture,color,etc  */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-Part Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .top-row {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex: 0 1 100px; /* Fixed height for the top row */
+        }
+        .bottom-row {
+            display: flex;
+            flex: 1; /* Take up remaining space */
+        }
+        .left-column, .right-column {
+            flex: 1; /* Equal width for columns */
+            padding: 20px;
+        }
+        .left-column {
+            background-color: #f2f2f2;
+        }
+        .right-column {
+            background-color: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-row">
+            <h1>Top Row</h1>
+        </div>
+        <div class="bottom-row">
+            <div class="left-column">
+                <h2>Left Column</h2>
+                <p>Content for the left column goes here.</p>
+            </div>
+            <div class="right-column">
+                <h2>Right Column</h2>
+                <p>Content for the right column goes here.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

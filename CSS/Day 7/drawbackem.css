@@ -1,0 +1,9 @@
+/* snow ball effect */
+/* div {
+    font-size: 2em;
+} */
+
+/* rem is used to avoid it */
+div{
+    font-size: 2rem;
+}

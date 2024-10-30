@@ -1,0 +1,15 @@
+#abc {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(225, 0, 0, 0.502);
+    /* #e1000080; last to digit are alpha channel*/
+}
+
+#def{
+    width: 200px;
+    height: 200px;
+    background-color: #ffa561;
+    opacity: 0;
+}
+
+/* Alpha just affects the color whereAs Opacity affects everything present inside the element. */

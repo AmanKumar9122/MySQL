@@ -1,0 +1,16 @@
+h2 {
+    /* color: orange; */
+    /* rgb color format */
+    /* color: rgb(255, 154, 87); */
+    /* Hexadecimal or Hex color format */
+    color:#0000ff ;
+}
+p {
+    color: white;
+    background-color: black;
+}
+
+button {
+    color: white;
+    background-color: black;
+}

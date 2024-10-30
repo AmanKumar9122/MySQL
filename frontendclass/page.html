@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Image on the Right</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .image {
+            flex-shrink: 0;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="text">
+        <h2>INDIA</h2>
+        <p>
+            India, a land of diverse cultures, languages, and traditions, is one of the oldest civilizations in the world, blending a rich heritage with modern dynamism. From the snow-capped peaks of the Himalayas in the north to the sun-kissed beaches of the south, India's geography is as varied as its people. The country is known for its vibrant festivals, delicious cuisine, and historical landmarks, such as the majestic Taj Mahal and the ancient temples of Khajuraho. As the world's largest democracy and a rapidly growing economy, India plays a significant role on the global stage, balancing its traditional roots with technological advancements. Home to numerous religions, including Hinduism, Islam, Christianity, Sikhism, and Buddhism, India exemplifies unity in diversity, where different cultures coexist harmoniously. With a young and energetic population, the nation continues to shape its identity, embracing its past while paving the way for a bright and innovative future.
+        </p>
+    </div>
+    <div class="image">
+        <img src="download.png" alt="India">
+    </div>
+</div>
+
+</body>
+</html>

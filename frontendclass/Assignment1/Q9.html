@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Registration</h1>
+
+    <form id="registrationForm">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <button type="button" onclick="registerUser()">Register</button>
+    </form>
+
+    <h2>Registered Users</h2>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        function registerUser() {
+            // Get user details from the form
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            // Create a new row
+            var table = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+
+            // Insert new cells into the row
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+
+            // Add data to the cells
+            cell1.textContent = name;
+            cell2.textContent = email;
+            cell3.textContent = phone;
+
+            // Clear the form
+            document.getElementById('registrationForm').reset();
+        }
+    </script>
+
+</body>
+</html>

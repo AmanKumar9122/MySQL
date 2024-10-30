@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Registration Form</title>
+</head>
+<body>
+
+    <h1>Job Registration Form</h1>
+
+    <form action="#" method="post">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="degree">Highest Degree:</label><br>
+        <input type="text" id="degree" name="degree" required><br><br>
+
+        <label for="experience">Work Experience (in years):</label><br>
+        <input type="number" id="experience" name="experience" min="0" required><br><br>
+
+        <label for="resume">Upload Resume:</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
