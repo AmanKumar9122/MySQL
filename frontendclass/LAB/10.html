@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        function validateFields(event) {
+            event.preventDefault(); // Prevent form submission
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Validate Name
+            const name = document.getElementById("name").value;
+            if (!validateName(name)) {
+                document.getElementById("nameError").textContent =
+                    "Name should contain only alphabets and be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // Validate Password
+            const password = document.getElementById("password").value;
+            if (!validatePassword(password)) {
+                document.getElementById("passwordError").textContent =
+                    "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById("email").value;
+            if (!validateEmail(email)) {
+                document.getElementById("emailError").textContent =
+                    "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate Phone Number
+            const phone = document.getElementById("num").value;
+            if (!validatePhone(phone)) {
+                document.getElementById("phoneError").textContent =
+                    "Please enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+                document.querySelector("form").submit();
+            }
+        }
+
+        function validateName(str) {
+            const regex = /^[a-zA-Z]{6,}$/;
+            return regex.test(str);
+        }
+
+        function validatePassword(str) {
+            return str.length >= 6;
+        }
+
+        function validateEmail(str) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(str);
+        }
+
+        function validatePhone(str) {
+            const regex = /^[0-9]{10}$/;
+            return regex.test(str);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validateFields(event)">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+            <div id="nameError" class="error"></div>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+            <div id="passwordError" class="error"></div>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <div id="emailError" class="error"></div>
+        </div>
+        <div>
+            <label for="num">Phone number</label>
+            <input type="tel" id="num" name="phone_num" />
+            <div id="phoneError" class="error"></div>
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>

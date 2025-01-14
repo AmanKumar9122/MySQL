@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count Using oninput</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        #charCount {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+    <script>
+        function calculateCharCount() {
+            // Get the value of the input field
+            let inputText = document.getElementById("textInput").value;
+
+            // Calculate the character count
+            let charCount = inputText.length;
+
+            // Display the character count
+            document.getElementById("charCount").innerText = "Character Count: " + charCount;
+        }
+    </script>
+</head>
+<body>
+    <h1>Character Count Using oninput Event</h1>
+    <p>Start typing in the input box below. The character count will update in real-time:</p>
+    <!-- Input field with oninput event -->
+    <input type="text" id="textInput" placeholder="Type something..." oninput="calculateCharCount()">
+    <!-- Display character count -->
+    <p id="charCount">Character Count: 0</p>
+</body>
+</html>

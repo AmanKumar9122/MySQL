@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hyperlinks</title>
+    <style>
+        
+
+        /* CSS for links containing 'http' */
+        a[href*="http"] {
+            color: green;
+        }
+
+        a[href*=".org"] {
+            color: red;
+        }
+
+        /* CSS for links containing 'GU' */
+        a[href*="GU"] {
+            color: blue;
+        }
+
+        /* General link styling */
+        a {
+            text-decoration: none; /* Removes underline */
+            font-size: 16px;
+            margin: 5px;
+            display: block; /* Places each link on a new line */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>College Hyperlinks</h2>
+    <!-- Links to various college names -->
+    <a href="http://www.harvard.edu">Harvard University</a>
+    <a href="https://www.stanford.org">Stanford University</a>
+    <a href="http://www.MIT.edu">Massachusetts Institute of Technology</a>
+    <a href="https://www.GU.edu">Gujarat University</a>
+    <a href="https://www.caltech.org">California Institute of Technology</a>
+    <a href="http://www.GU.ac.in">Galgotias University</a>
+
+</body>
+</html>

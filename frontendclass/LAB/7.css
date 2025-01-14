@@ -1,0 +1,64 @@
+/* Apply a background image to the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://picsum.photos/1920/1080'); /* Random background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Styling the container */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styles */
+.title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #2a9d8f;
+    text-align: center;
+}
+
+/* Intro paragraph styles */
+.intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Highlight box with its own background image */
+.box {
+    margin: 20px 0;
+    padding: 15px;
+    background-image: url('https://picsum.photos/400/200'); /* Random background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Highlighted text in the box */
+.highlight {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styles */
+.footer {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}

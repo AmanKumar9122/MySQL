@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words</title>
+</head>
+<body>
+    <h3>Enter a number (0-999):</h3>
+    <input type="text" id="number" placeholder="Enter number">
+    <button onclick="convertToWords()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convertToWords() {
+            const num = document.getElementById('number').value.trim();
+            const resultBox = document.getElementById('result');
+            if (isNaN(num)) return resultBox.textContent = "Not a number";
+            const number = parseInt(num);
+            if (number < 0 || number > 999) return resultBox.textContent = "Out of range";
+
+            const singleDigits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+            const twoDigits = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+            const tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+            
+            let words = number === 0 ? "Zero" : "";
+            if (number >= 100) words += singleDigits[Math.floor(number / 100)] + " Hundred ";
+            if (number % 100 >= 20) words += tens[Math.floor((number % 100) / 10)] + " " + singleDigits[number % 10];
+            else if (number % 100 >= 10) words += twoDigits[number % 100 - 10];
+            else words += singleDigits[number % 10];
+            
+            resultBox.textContent = words.trim();
+        }
+    </script>
+</body>
+</html>

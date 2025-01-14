@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External Styles -->
+    <style>
+        .error { color: red; } /* Internal Style */
+    </style>
+</head>
+<body>
+    <h1 style="color: teal;">Form</h1> <!-- Inline Style -->
+    <form id="form">
+        <input id="name" type="text" placeholder="Name">
+        <span id="nameError" class="error"></span><br>
+        <input id="email" type="email" placeholder="Email">
+        <span id="emailError" class="error"></span><br>
+        <button type="button" onclick="validate()">Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            document.getElementById('nameError').innerText = name ? "" : "Name required.";
+            document.getElementById('emailError').innerText = email.includes("@") ? "" : "Invalid email.";
+            if (name && email.includes("@")) alert("Valid!");
+        }
+    </script>
+</body>
+</html>

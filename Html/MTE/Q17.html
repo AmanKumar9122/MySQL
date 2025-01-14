@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Apparel Store</title>
+    <style>
+        .product {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product video {
+            width: 100%;
+            display: none;
+        }
+        .product:hover video {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Online Apparel Store</h1>
+    <div class="product">
+        <img src="shirt.jpg" alt="Shirt">
+        <video src="shirt.mp4" controls></video>
+        <p>Shirt</p>
+    </div>
+    <div class="product">
+        <img src="pants.jpg" alt="Pants">
+        <video src="pants.mp4" controls></video>
+        <p>Pants</p>
+    </div>
+</body>
+</html>

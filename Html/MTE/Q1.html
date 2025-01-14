@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List and Author Info</title>
+    <style>
+        /* CSS for Roman list with green background */
+        .roman-list {
+            background-color: green;
+            padding: 10px;
+            list-style-type: upper-roman;
+            color: white;
+        }
+
+        /* CSS for circle bullets with second line content aligned below */
+        .circle-list {
+            list-style-type: circle;
+        }
+
+        .circle-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        .circle-list li span {
+            display: block; /* Places second line content below bullet */
+            margin-left: 20px;
+        }
+
+        /* CSS for table inside a gray div with blue separated cells */
+        .table-container {
+            background-color: gray;
+            padding: 15px;
+        }
+
+        table {
+            border-spacing: 10px; /* Cell spacing */
+            background-color: blue;
+            width: 100%;
+        }
+
+        td, th {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First List: Roman List -->
+    <h2>List of Books</h2>
+    <ul class="roman-list">
+        <li>The Great Gatsby</li>
+        <li>To Kill a Mockingbird</li>
+        <li>1984</li>
+        <li>Harry Potter and the Sorcerer's Stone</li>
+        <li>The Lord of the Rings</li>
+    </ul>
+
+    <!-- Second List: Circle Bullet List -->
+    <h2>List of Authors</h2>
+    <ul class="circle-list">
+        <li>F. Scott Fitzgerald <span>Author of "The Great Gatsby"</span></li>
+        <li>Harper Lee <span>Author of "To Kill a Mockingbird"</span></li>
+        <li>George Orwell <span>Author of "1984"</span></li>
+        <li>J.K. Rowling <span>Author of "Harry Potter"</span></li>
+        <li>J.R.R. Tolkien <span>Author of "The Lord of the Rings"</span></li>
+    </ul>
+
+    <!-- Table: Book and Author Information -->
+    <h2>Book and Author Table</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+            </tr>
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+            </tr>
+            <tr>
+                <td>Harry Potter</td>
+                <td>J.K. Rowling</td>
+            </tr>
+            <tr>
+                <td>The Lord of the Rings</td>
+                <td>J.R.R. Tolkien</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

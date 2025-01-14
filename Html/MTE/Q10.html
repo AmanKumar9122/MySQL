@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Content with CSS</title>
+    <style>
+        /* Insert "Galgotias University" before the paragraph content */
+        p::before {
+            content: "Galgotias University - ";
+            font-weight: bold;
+            color: darkred;
+        }
+
+        /* Insert mobile number after the paragraph content */
+        p::after {
+            content: " | Contact: +91-1234567890";
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+        /* General paragraph styling */
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Galgotias University</h1>
+    <p>This is the first paragraph explaining the mission of the university.</p>
+    <p>We aim to provide the best education and opportunities for students.</p>
+    <p>Our faculty and resources ensure excellence in learning.</p>
+</body>
+</html>
