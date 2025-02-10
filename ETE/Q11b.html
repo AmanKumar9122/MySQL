@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events Example</title>
+    <script>
+        function showKey(event) {
+            document.getElementById("output").innerHTML = "Key Pressed: " + event.key;
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" onkeyup="showKey(event)" placeholder="Type something...">
+    <p id="output"></p>
+
+</body>
+</html>
