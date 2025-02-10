@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Background Colors</title>
+    <style>
+        /* First paragraph background color yellow */
+        p:first-of-type {
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        /* Remaining paragraphs background color blue */
+        p:not(:first-of-type) {
+            background-color: blue;
+            color: white; /* White text for better contrast */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>This is the first paragraph with a yellow background.</p>
+    <p>This is the second paragraph with a blue background.</p>
+    <p>This is the third paragraph with a blue background.</p>
+
+</body>
+</html>
