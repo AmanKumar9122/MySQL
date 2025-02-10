@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List and Author Information</title>
+    <style>
+        /* Styling for list with Roman numerals and green background */
+        .roman-list {
+            list-style-type: upper-roman;
+            background-color: green;
+            padding: 10px;
+            color: white;
+        }
+
+        /* Styling for list with circle bullets */
+        .circle-list {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        /* Ensuring second-line text appears just below the bullet */
+        .circle-list li {
+            display: list-item;
+        }
+
+        /* Table styling inside a gray div */
+        .table-container {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            background-color: blue;
+            width: 100%;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid white;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>List of Books</h2>
+    <ol class="roman-list">
+        <li>The Great Gatsby</li>
+        <li>To Kill a Mockingbird</li>
+        <li>1984</li>
+        <li>Pride and Prejudice</li>
+        <li>Moby-Dick</li>
+    </ol>
+
+    <h2>More Books</h2>
+    <ul class="circle-list">
+        <li>
+            The Catcher in the Rye
+            <br>by J.D. Salinger
+        </li>
+        <li>
+            Brave New World
+            <br>by Aldous Huxley
+        </li>
+        <li>
+            The Hobbit
+            <br>by J.R.R. Tolkien
+        </li>
+    </ul>
+
+    <h2>Author Information</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Author</th>
+                <th>Famous Book</th>
+                <th>Genre</th>
+            </tr>
+            <tr>
+                <td>F. Scott Fitzgerald</td>
+                <td>The Great Gatsby</td>
+                <td>Classic</td>
+            </tr>
+            <tr>
+                <td>Harper Lee</td>
+                <td>To Kill a Mockingbird</td>
+                <td>Fiction</td>
+            </tr>
+            <tr>
+                <td>George Orwell</td>
+                <td>1984</td>
+                <td>Dystopian</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
