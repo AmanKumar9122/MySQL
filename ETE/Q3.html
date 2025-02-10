@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Links</title>
+    <style>
+        /* Links ending with .org in red */
+        a[href$=".org"] {
+            color: red;
+        }
+
+        /* Links starting with http in green */
+        a[href^="http"] {
+            color: green;
+        }
+
+        /* Links containing "GU" in blue */
+        a[href*="GU"] {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>College Links</h2>
+    <ul>
+        <li><a href="http://www.harvard.edu">Harvard University</a></li>
+        <li><a href="https://www.stanford.org">Stanford University</a></li>
+        <li><a href="http://www.mit.edu">MIT</a></li>
+        <li><a href="https://www.galgotiasuniversity.edu.in">Galgotias University</a></li>
+        <li><a href="https://www.oxford.org">Oxford University</a></li>
+    </ul>
+
+</body>
+</html>
