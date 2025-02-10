@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Text Before and After</title>
+    <style>
+        /* Insert "Galgotias University" before each paragraph */
+        p::before {
+            content: "Galgotias University - ";
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Insert college mobile number after each paragraph */
+        p::after {
+            content: " | Contact: +91-9876543210";
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <p>This is some paragraph content.</p>
+    <p>Another paragraph with additional information.</p>
+
+</body>
+</html>
