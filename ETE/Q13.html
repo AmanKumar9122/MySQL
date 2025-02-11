@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example</title>
+    <script>
+        function changeContent() {
+            document.getElementById("message").innerHTML = "Hello, DHTML!";
+            document.getElementById("message").style.color = "red";
+        }
+    </script>
+</head>
+<body>
+
+    <h2 id="message">Click the button to change this text.</h2>
+    <button onclick="changeContent()">Click Me</button>
+
+</body>
+</html>
