@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Apparel Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { text-align: center; background: #f8f8f8; padding: 20px; }
+
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .product { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 250px; }
+        .product img { width: 100%; border-radius: 5px; }
+        .product h3 { margin: 10px 0; }
+        .product video { width: 100%; display: none; }
+        .btn { background: blue; color: white; padding: 8px; border: none; cursor: pointer; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Our Apparel Store</h1>
+    
+    <div class="container">
+        <div class="product">
+            <img src="shirt.jpg" alt="Shirt">
+            <h3>Stylish Shirt</h3>
+            <button class="btn" onclick="showVideo('video1')">Play Video</button>
+            <video id="video1" controls>
+                <source src="shirt.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="product">
+            <img src="jacket.jpg" alt="Jacket">
+            <h3>Classic Jacket</h3>
+            <button class="btn" onclick="showVideo('video2')">Play Video</button>
+            <video id="video2" controls>
+                <source src="jacket.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function showVideo(id) {
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
